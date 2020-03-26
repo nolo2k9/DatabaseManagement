@@ -1,0 +1,26 @@
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `specialist`
+--
+
+DROP TABLE IF EXISTS `specialist`;
+CREATE TABLE IF NOT EXISTS `specialist` (
+  `patientno` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT,
+  `severity` int(3) DEFAULT NULL,
+  `reportSent` enum('Y','N') NOT NULL,
+  KEY `patientno` (`patientno`)
+) ENGINE=InnoDB AUTO_INCREMENT=7903 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `specialist`
+--
+
+INSERT INTO `specialist` (`patientno`, `severity`, `reportSent`) VALUES
+(007521, 1, 'Y'),
+(007654, 3, 'N'),
+(007782, 2, 'N'),
+(007844, 1, 'Y'),
+(007876, 3, 'N'),
+(007902, 3, 'Y');

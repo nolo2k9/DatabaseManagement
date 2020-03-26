@@ -1,0 +1,53 @@
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `patient`
+--
+
+DROP TABLE IF EXISTS `patient`;
+CREATE TABLE IF NOT EXISTS `patient` (
+  `patientno` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT,
+  `title` enum('Mr.','Mrs.','Miss.','Ms.','Dr.','Fr.','Rev.') DEFAULT NULL,
+  `job` enum('CLERK','SALESMAN','MANAGER','Data ANALYST','PRESIDENT','Army','Developer','Self Employed','Lecturer','UX','Database Desinger') DEFAULT NULL,
+  `assignedentist` smallint(5) UNSIGNED DEFAULT NULL,
+  `currency_symbol` varchar(10) DEFAULT NULL,
+  `salary` decimal(6,2) UNSIGNED DEFAULT NULL,
+  `comm` decimal(6,2) UNSIGNED DEFAULT NULL,
+  `picture` longblob,
+  `picture_path` varchar(20) DEFAULT NULL,
+  `specialistRef` enum('Y','N') NOT NULL,
+  `Age` int(11) DEFAULT NULL,
+  PRIMARY KEY (`patientno`)
+) ENGINE=InnoDB AUTO_INCREMENT=7935 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `patient`
+--
+
+INSERT INTO `patient` (`patientno`, `title`, `job`, `assignedentist`, `currency_symbol`, `salary`, `comm`, `picture`, `picture_path`, `specialistRef`, `Age`) VALUES
+(007369, 'Miss.', 'Developer', 7566, '€', '800.23', NULL, NULL, '/teeth1.jpg', 'N', 54);
+INSERT INTO `patient` (`patientno`, `title`, `job`, `assignedentist`, `currency_symbol`, `salary`, `comm`, `picture`, `picture_path`, `specialistRef`, `Age`) VALUES
+(007499, 'Mr.', 'SALESMAN', 7698, '€', '1600.56', '/teeth2.jpg', 'N', 34);
+INSERT INTO `patient` (`patientno`, `title`, `job`, `assignedentist`, `currency_symbol`, `salary`, `comm`, `picture`, `picture_path`, `specialistRef`, `Age`) VALUES
+(007521, 'Mr.', 'Self Employed', 7566, '€', '1250.00', '/teeth3.png', 'Y', 23);
+INSERT INTO `patient` (`patientno`, `title`, `job`, `assignedentist`, `currency_symbol`, `salary`, `comm`, `picture`, `picture_path`, `specialistRef`, `Age`) VALUES
+(007566, 'Rev.', 'Lecturer', 7839, '€', '2976.00', NULL, '/teeth4.jpg', 'N', 26);
+INSERT INTO `patient` (`patientno`, `title`, `job`, `assignedentist`, `currency_symbol`, `salary`, `comm`, `picture`, `picture_path`, `specialistRef`, `Age`) VALUES
+(007654, 'Fr.', 'SALESMAN', 7698, '€', '1250.00', '1400.00', '/teeth5.jpg', 'Y', 37);
+INSERT INTO `patient` (`patientno`, `title`, `job`, `assignedentist`, `currency_symbol`, `salary`, `comm`, `picture`, `picture_path`, `specialistRef`, `Age`) VALUES
+(007698, 'Mr.', 'MANAGER', 7839, '€', '2850.00', NULL, '/teeth6.png', 'N', 25);
+INSERT INTO `patient` (`patientno`, `title`, `job`, `assignedentist`, `currency_symbol`, `salary`, `comm`, `picture`, `picture_path`, `specialistRef`, `Age`) VALUES
+(007782, 'Mr.', 'MANAGER', 7839, '€', '2450.00', NULL, '/teeth7.jpg', 'Y', 27);
+INSERT INTO `patient` (`patientno`, `title`, `job`, `assignedentist`, `currency_symbol`, `salary`, `comm`, `picture`, `picture_path`, `specialistRef`, `Age`) VALUES
+(007788, 'Mr.', 'Army', 7788, '€', '3000.00', NULL, NULL, '/teeth8.jpg', 'N', 49),
+(007839, 'Miss.', 'PRESIDENT', NULL, '€', NULL, NULL, '/teeth9.jpg', 'N', 32);
+INSERT INTO `patient` (`patientno`, `title`, `job`, `assignedentist`, `currency_symbol`, `salary`, `comm`, `picture`, `picture_path`, `specialistRef`, `Age`) VALUES
+(007844, 'Mr.', 'UX', 7698, '€', '1500.00', '0.00', '/teeth10.jpg', 'Y', 45);
+INSERT INTO `patient` (`patientno`, `title`, `job`, `assignedentist`, `currency_symbol`, `salary`, `comm`, `picture`, `picture_path`, `specialistRef`, `Age`) VALUES
+(007876, 'Mrs.', 'Database Desinger', 7788, '€', '1100.00', NULL, 0x633a2f74656574682f7465657468322e6a7067, 'teeth2.jpg', 'Y', 61);
+INSERT INTO `patient` (`patientno`, `title`, `job`, `assignedentist`, `currency_symbol`, `salary`, `comm`, `picture`, `picture_path`, `specialistRef`, `Age`) VALUES
+(007900, 'Mr.', 'CLERK', 7698, '€', '950.00', NULL, '/teeth2.jpg', 'N', 53);
+INSERT INTO `patient` (`patientno`, `title`, `job`, `assignedentist`, `currency_symbol`, `salary`, `comm`, `picture`, `picture_path`, `specialistRef`, `Age`) VALUES
+(007902, 'Mrs.', 'Data ANALYST', 7902, '€', '3000.00', NULL, '/teeth4.jpg', 'Y', 19),
+(007934, 'Mr.', 'CLERK', 7782, '€', '1300.00', NULL, NULL, '/teeth8.jpg', 'N', 30);

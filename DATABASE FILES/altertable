@@ -1,0 +1,22 @@
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `appointment`
+--
+ALTER TABLE `appointment`
+  ADD CONSTRAINT `appointment_ibfk_1` FOREIGN KEY (`patientno`) REFERENCES `patient` (`patientno`);
+
+--
+-- Constraints for table `payment`
+--
+ALTER TABLE `payment`
+  ADD CONSTRAINT `payment_ibfk_1` FOREIGN KEY (`patientno`) REFERENCES `patient` (`patientno`);
+
+--
+-- Constraints for table `specialist`
+--
+ALTER TABLE `specialist`
+  ADD CONSTRAINT `specialist_ibfk_1` FOREIGN KEY (`patientno`) REFERENCES `patient` (`patientno`);

@@ -1,0 +1,36 @@
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `payment`
+--
+
+DROP TABLE IF EXISTS `payment`;
+CREATE TABLE IF NOT EXISTS `payment` (
+  `patientno` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT,
+  `paymentno` int(6) NOT NULL,
+  `overdue` enum('TRUE','FALSE') DEFAULT NULL,
+  `type` enum('CREDITCARD','CHEQUE','ONLINE','CASH','NA') DEFAULT NULL,
+  PRIMARY KEY (`paymentno`),
+  KEY `patientno` (`patientno`)
+) ENGINE=InnoDB AUTO_INCREMENT=7935 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `payment`
+--
+
+INSERT INTO `payment` (`patientno`, `paymentno`, `overdue`, `type`) VALUES
+(007369, 1200, 'TRUE', 'NA'),
+(007902, 1219, 'FALSE', 'ONLINE'),
+(007788, 1232, 'FALSE', 'CASH'),
+(007521, 1234, 'FALSE', 'CASH'),
+(007499, 1345, 'FALSE', 'ONLINE'),
+(007876, 2123, 'TRUE', 'NA'),
+(007698, 3214, 'FALSE', 'CREDITCARD'),
+(007934, 3456, 'TRUE', 'NA'),
+(007839, 3457, 'FALSE', 'CREDITCARD'),
+(007566, 4321, 'FALSE', 'CHEQUE'),
+(007654, 5643, 'TRUE', 'NA'),
+(007844, 5654, 'FALSE', 'ONLINE'),
+(007782, 5678, 'TRUE', 'NA'),
+(007900, 6543, 'FALSE', 'CREDITCARD');
